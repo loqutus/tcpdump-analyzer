@@ -8,7 +8,7 @@ try:
 except IndexError:
     input_request_type = 'A'
 else:
-    input_request_type = sys.args[1]
+    input_request_type = sys.argv[1]
 with open('dump.txt') as f:
     for line in f:
         if '>' in line:
