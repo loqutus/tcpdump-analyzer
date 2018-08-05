@@ -14,8 +14,8 @@ spec:
         args:
          - "-c"
          - >
-           cd /
-           wget -c https://storage.googleapis.com/interview-test/dump.txt
-           /parse.py
+           cd / &&
+           wget -c https://storage.googleapis.com/interview-test/dump.txt &&
+           /parse.py &&
            curl -v --upload-file /output.txt -H "Authorization: Bearer GCLOUD_API_KEY" 'https://storage.googleapis.com/interview-test/output_$(date +%s)'
       restartPolicy: Never
