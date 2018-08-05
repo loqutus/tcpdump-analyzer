@@ -10,7 +10,7 @@ spec:
       containers:
       - name: parser
         image: loqutus/tcpdump_parser:tag
-        command: ["/bin/bash"]
+        command: ["/bin/sh"]
         args:
          - "-c"
          - >
