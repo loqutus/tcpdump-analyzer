@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: parse
+spec:
+  template:
+    metadata:
+      name: parse
+    spec:
+      containers:
+      - name: parser
+        image: loqutus/tcpdump_parser:tag
+        command: ["/bin/bash"]
+        args:
+         - "-c"
+         - >
+           cd /
+           wget -c https://storage.googleapis.com/interview-test/dump.txt
+           /parse.py
+      restartPolicy: Never
