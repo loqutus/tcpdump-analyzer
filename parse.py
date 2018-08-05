@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+
 import sys
 import json
+
 request_types = {}
 domains = {}
+
 try:
     sys.argv[1]
 except IndexError:
