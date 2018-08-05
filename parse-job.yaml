@@ -1,11 +1,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: parse
+  name: parse-tag
 spec:
   template:
     metadata:
-      name: parse
+      name: parse-tag
     spec:
       containers:
       - name: parser
